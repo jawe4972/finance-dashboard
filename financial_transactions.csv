@@ -188,7 +188,7 @@ html {
   <div class="col-2"> </div>
   <div class="col-8">
     <div class="service-login">
-      <a role="button" class='btn btn-jupyter btn-lg' href='/hub/oauth_login?next=%2Fhub%2Fapi%2Foauth2%2Fauthorize%3Fclient_id%3Djupyterhub-user-jawe4972%26redirect_uri%3D%252Fuser%252Fjawe4972%252Foauth_callback%26response_type%3Dcode%26state%3DeyJ1dWlkIjogIjkyYmUxYzU5ODE0ZjQ2YmVhYmVmMWQzMzk0NTZhMjE5IiwgIm5leHRfdXJsIjogIi91c2VyL2phd2U0OTcyL2ZpbGVzL0ZJTlBST0ovZmluYW5jZS1kYXNoYm9hcmQvZmluYW5jaWFsX3RyYW5zYWN0aW9ucy5jc3YifQ'>
+      <a role="button" class='btn btn-jupyter btn-lg' href='/hub/oauth_login?next=%2Fhub%2Fuser-redirect%2Flab%2Ftree%2FFINPROJ%2Ffinance-dashboard%2Ffinancial_transactions.csv'>
 	Sign in with Identikey@colorado.edu
       </a>
     </div>
