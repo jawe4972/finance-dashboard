@@ -1,0 +1,271 @@
+
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JupyterHub</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="/hub/static/css/style.min.css?v=bff49b4a161afb17ee3b71927ce7d6c4e5b0e4b9ef6f18ca3e356a05f29e69776d3a76aee167060dd2ae2ee62d3cfdcf203b4b0090b1423f7d629ea7daa3f9da" type="text/css"/>
+    
+    
+    <link rel="icon" href="/hub/static/favicon.ico?v=fde5757cd3892b979919d3b1faa88a410f28829feb5ba22b6cf069f2c6c98675fceef90f932e49b510e74d65c681d5846b943e7f7cc1b41867422f0481085c1f" type="image/x-icon">
+    
+    
+    <script src="/hub/static/components/requirejs/require.js?v=bd1aa102bdb0b27fbf712b32cfcd29b016c272acf3d864ee8469376eaddd032cadcf827ff17c05a8c8e20061418fe58cf79947049f5c0dff3b4f73fcc8cad8ec" type="text/javascript" charset="utf-8"></script>
+    <script src="/hub/static/components/jquery/dist/jquery.min.js?v=f3de1813a4160f9239f4781938645e1589b876759cd50b7936dbd849a35c38ffaed53f6a61dbdd8a1cf43cf4a28aa9fffbfddeec9a3811a1bb4ee6df58652b31" type="text/javascript" charset="utf-8"></script>
+    <script src="/hub/static/components/bootstrap/dist/js/bootstrap.min.js?v=a014e9acc78d10a0a7a9fbaa29deac6ef17398542d9574b77b40bf446155d210fa43384757e3837da41b025998ebfab4b9b6f094033f9c226392b800df068bce" type="text/javascript" charset="utf-8"></script>
+    
+    <script>
+      require.config({
+          
+          urlArgs: "v=20250512232816",
+          
+          baseUrl: '/hub/static/js',
+          paths: {
+            components: '../components',
+            jquery: '../components/jquery/dist/jquery.min',
+            bootstrap: '../components/bootstrap/dist/js/bootstrap.min',
+            moment: "../components/moment/moment",
+          },
+          shim: {
+            bootstrap: {
+              deps: ["jquery"],
+              exports: "bootstrap"
+            },
+          }
+      });
+    </script>
+
+    <script type="text/javascript">
+      window.jhdata = {
+        base_url: "/hub/",
+        prefix: "/",
+        
+        
+        admin_access: false,
+        
+        
+        options_form: false,
+        
+      }
+    </script>
+
+    
+    
+
+</head>
+
+<body>
+
+<noscript>
+  <div id='noscript'>
+    JupyterHub requires JavaScript.<br>
+    Please enable it to proceed.
+  </div>
+</noscript>
+
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        
+        <span id="jupyterhub-logo" class="pull-left">
+            <a href="/hub/"><img src='/hub/logo' alt='JupyterHub' class='jpy-logo' title='Home'/></a>
+        </span>
+        
+        
+      </div>
+
+      <div class="collapse navbar-collapse" id="thenavbar">
+        
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li>
+              
+
+            </li>
+          
+        </ul>
+      </div>
+
+      
+      
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+}
+.auth-form-header {
+    background-color: #CFB87C !important;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+
+
+<div id="login-main" class="container">
+
+
+    <div class="row">
+      <div class="col-1">
+	<img alt=" " src="https://www.colorado.edu/brand/sites/default/files/page/boulder-fl-vertical-b-2.png" width="128">
+      </div>
+      <div class="col-1"> </div>
+      <div class="col-8">
+	<div class="header">
+	  <h2> Coding @ Computer Science Education Lab </h2>
+	  <h3> Department of Computer Science </h3>
+	  <h4> University of Colorado, Boulder </h4>
+	</div>
+      </div>
+    </div>
+
+<div class="row">
+  <div class="col-2"> </div>
+  <div class="col-8">
+    <div class="service-login">
+      <a role="button" class='btn btn-jupyter btn-lg' href='/hub/oauth_login?next=%2Fhub%2Fapi%2Foauth2%2Fauthorize%3Fclient_id%3Djupyterhub-user-jawe4972%26redirect_uri%3D%252Fuser%252Fjawe4972%252Foauth_callback%26response_type%3Dcode%26state%3DeyJ1dWlkIjogIjU1NGViMmUzNTczNzQ5Yjk5YmNlMzhkMTMxN2IxNjFkIiwgIm5leHRfdXJsIjogIi91c2VyL2phd2U0OTcyL2ZpbGVzL0ZJTlBST0ovZmluYW5jZS1kYXNoYm9hcmQvZmluYW5jaWFsX3RyYW5zYWN0aW9ucy5jc3Y_ZG93bmxvYWQ9dHJ1ZSJ9'>
+	Sign in with Identikey@colorado.edu
+      </a>
+    </div>
+  </div>
+</div>
+<div class="row">
+<div class="col-2"> </div>
+<div class="col-8">
+  <H2>Welcome to Coding@csel.io !</H2>
+
+  <p>The Computer Science Educational Lab (CSEL) provides
+    this online programming lab for students taking Computer Science
+    classes. You should login using your identikey via CU Azure. </p>
+
+  <p> The coding environment used the <a href="https://jupyter.org/"> Project Jupyter </a>
+    environment. Documentation and additional information is available
+    at the <a href="https://csel.cs.colorado.edu/index.html">
+      Computer Science Educational Resource Guide </a>. </p>
+
+  <p> If you have problems or questions, contact the
+    <a href="mailto:cscihelp@colorado.edu">the CS IT help desk</a>.</p>
+
+<p>This system is funded by the Department of Computer Science for students in its classes</p>
+<div class="text-center alert alert-warning" role="alert" style="background-color:#3371e3;color:#fff;background:#c70202">
+  <h4>The default disk quota is 8GB. If you exceed this limit,JupyterHub will fail to launch the notebook server.To avoid this issue, check your disk usage by running "du -h -d 1" in the terminal and remove any unnecessary files before closing the browser.Please see the <a href="https://canvas.colorado.edu/courses/64136/modules/items/5067598">link</a> about how to resolve the launch failure.</h4>
+</div>
+</div> <!-- col-8 -->
+</div> <!-- row -->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="error-dialog" tabindex="-1" role="dialog" aria-labelledby="error-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="error-label">Error</h4>
+      </div>
+      <div class="modal-body">
+        
+  <div class="ajax-error">
+    The error
+  </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script>
+if (window.location.protocol === "http:") {
+  // unhide http warning
+  var warning = document.getElementById('insecure-login-warning');
+  warning.className = warning.className.replace(/\bhidden\b/, '');
+}
+</script>
+
+
+
+</body>
+
+</html>
