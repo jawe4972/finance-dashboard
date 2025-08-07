@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Finance Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>Finance Dashboard</h1>
+
+<canvas id="dailyChart"></canvas>
+<canvas id="categoryChart"></canvas>
+<canvas id="forecastChart"></canvas>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
